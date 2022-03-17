@@ -1,0 +1,100 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     text-align:center;
+     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+     font-weight: 700;
+     background: black;
+     color: white;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+     height: 3rem;
+     font-size: 2rem;
+     line-height: 3rem;
+     border-bottom: 1px solid rgb(58, 58, 60);
+}
+
+.container {
+     padding: 2rem 0;
+}
+
+table {
+     margin: 0 auto;
+}
+
+.middleOfKeyboard{
+     width: 20rem;
+}
+
+.topOfKeyboard,
+.bottomOfKeyboard{
+     width: 22rem;
+}
+
+.guessTable{
+     width: 16rem;
+     height: 20rem;
+     border-collapse: separate;
+     border-spacing: .3rem;
+}
+.guess{
+     border: 1px solid rgb(58, 58, 60);
+     width: 1rem;
+     height: 3.2rem;
+     line-height: 3.2rem;
+}
+
+button{
+     width: 1rem;
+     height: 1rem;
+     background-color: rgb(130, 130, 130);
+     border: none;
+     border-radius: 5px;
+     margin: 10%;
+     font-weight: 900;
+     color: white;
+     font-size: .5rem;
+}
+
+form, input {
+     width: 1rem;
+     border-radius: 0;
+     border: 0 solid rgb(58, 58, 60);
+}
+
+.keyboard{
+     width: 2rem;
+     height: 2.5rem;
+}
+.wider{
+     width: 3rem;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
