@@ -34,40 +34,48 @@ function checkAnswer() {
         word.push(document.getElementById(`guess${wordNo}-letter${i}`).innerText)
     }
 
-    //CHECK WHETHER THE WORD IS LONG ENOUGH
+    
     word = word.join('');
+    //CHECK WHETHER THE WORD IS LONG ENOUGH
     if (word.length !== 5) {
         alert('Not enough letters')
     }
 
-    //CHECK WHETHER WORD IS AN ACTUAL WORD OR NOT:
+
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
+    //CHECK WHETHER WORD IS AN ACTUAL WORD OR NOT:
             if (data.title === "No Definitions Found") {
                 alert ('Not in word list')
             }
+    //ALERT CORRECT LETTERS & CORRECT LETTER PLACEMENT        
+            else {
+                for (let i = 1; i < 6; i++) {
+                    if (document.getElementById(`guess${wordNo}-letter${i}`).innerText === theWord_[i - 1]) {
+                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'green';
+                        theWord_[i - 1] = ' ';
+                    } else if (theWord_.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
+                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'gold';
+                    } else if (!theWord.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
+                        document.getElementById(`${document.getElementById(`guess${wordNo}-letter${i}`).innerText}`).style.background = 'black';
+                    }
+                }
+                if (word === theWord) {
+                    alert('Bingo!')
+                } else {
+                    wordNo += 1;
+                    placeHolder = 1;
+                }
+            }
+            
         console.log(data)
         })
         .catch(err => {
             console.log(`error ${err}`)
         });
     
-    //ALERT CORRECT LETTERS & CORRECT LETTER PLACEMENT
-    for (let i = 1; i < 6; i++) {
-        if (document.getElementById(`guess${wordNo}-letter${i}`).innerText === theWord_[i - 1]) {
-            document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'green';
-            theWord_[i - 1] = ' ';
-        } else if (theWord_.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
-            document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'gold';
-        } else if (!theWord.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
-            document.getElementById(`${document.getElementById(`guess${wordNo}-letter${i}`).innerText}`).style.background = 'black';
-        }
-    }
-    if (word === theWord) {
-        alert('Bingo!')
-    } else {
-        wordNo += 1;
-        placeHolder = 1;
-    }
+    
+    
+    
 }
