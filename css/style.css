@@ -40,7 +40,7 @@ header {
 }
 
 .container {
-     padding: 2rem 0;
+     padding: 1rem 0;
 }
 
 table {
@@ -58,14 +58,13 @@ table {
 
 .guessTable{
      width: 16rem;
-     height: 20rem;
      border-collapse: separate;
      border-spacing: .3rem;
 }
 .guess{
      border: 1px solid rgb(58, 58, 60);
-     width: 1rem;
-     height: 3.2rem;
+     width: 10%;
+     height: 10vw;
      line-height: 3.2rem;
 }
 
@@ -87,7 +86,7 @@ form, input {
      border: 0 solid rgb(58, 58, 60);
 }
 
-.keyboard{
+.keyboard, .wideKeyBoard{
      width: 2rem;
      height: 2.5rem;
 }
