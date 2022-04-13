@@ -1,7 +1,25 @@
 //use https://dictionaryapi.dev/ to check validity
 
+//https://wordsapiv1.p.mashape.com/words/?letters=6?random=true
+
 //Choose new word upon refresh: ADD THIS FUNCTIONALITY
-const theWord = 'QUALM';
+let theWord = 'MERGE';
+
+/* fetch(`https://wordsapiv1.p.mashape.com/words/?letters=6?random=true`)
+        .then(res => res.json()) // parse response as JSON
+        .then(data => {
+            
+            console.log(data);
+            theWord = data.word;
+            
+        })
+        .catch(err => {
+            console.log(`error ${err}`)
+        });
+
+
+
+ */
 let theWord_ = theWord.split('');
 let placeHolder = 1
 let wordNo = 1

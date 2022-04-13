@@ -43,25 +43,22 @@ header {
      padding: 8px 0;
 }
 
-table {
-     margin: 0 auto;
-}
-
 .middleOfKeyboard, 
 .topOfKeyboard,
 .bottomOfKeyboard {
-     width: 384px;
+     width: 100%;
      display: flex;
      flex-flow: row wrap;
      justify-content: center;
 }
 
 .guessTable{
-     width: 270px;
+     width: 100%;
      border-collapse: separate;
      border-spacing: 4px;
      display: flex;
      flex-flow: row wrap;
+     justify-content: center;
 }
 .guess{
      border: 1px solid rgb(58, 58, 60);
