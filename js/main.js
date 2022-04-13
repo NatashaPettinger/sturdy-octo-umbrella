@@ -1,7 +1,7 @@
 //use https://dictionaryapi.dev/ to check validity
 
 //Choose new word upon refresh: ADD THIS FUNCTIONALITY
-const theWord = 'APPLE';
+const theWord = 'QUALM';
 let theWord_ = theWord.split('');
 let placeHolder = 1
 let wordNo = 1
@@ -52,11 +52,13 @@ function checkAnswer() {
     //ALERT CORRECT LETTERS & CORRECT LETTER PLACEMENT        
             else {
                 for (let i = 1; i < 6; i++) {
-                    if (document.getElementById(`guess${wordNo}-letter${i}`).innerText === theWord_[i - 1]) {
-                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'green';
+                    if (document.getElementById(`guess${wordNo}-letter${i}`).innerText === theWord[i - 1]) {
+                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'rgb(85,140,81)';
                         theWord_[i - 1] = ' ';
+                        document.getElementById(`${document.getElementById(`guess${wordNo}-letter${i}`).innerText}`).style.background = 'rgb(85,140,81)';
                     } else if (theWord_.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
-                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'gold';
+                        document.getElementById(`guess${wordNo}-letter${i}`).style.background = 'rgb(180,158,67)';
+                        document.getElementById(`${document.getElementById(`guess${wordNo}-letter${i}`).innerText}`).style.background = 'rgb(180,158,67)';
                     } else if (!theWord.includes(document.getElementById(`guess${wordNo}-letter${i}`).innerText)) {
                         document.getElementById(`${document.getElementById(`guess${wordNo}-letter${i}`).innerText}`).style.background = 'black';
                     }
