@@ -3,10 +3,10 @@
 //https://wordsapiv1.p.mashape.com/words/?letters=6?random=true
 
 //Choose new word upon refresh: ADD THIS FUNCTIONALITY
-const wordArr = ['APPLE', 'QUALM', 'MERGE', 'WATER', 'SMELT', 'PASTE', 'BOXES', 'VODKA', 'PORCH', 'THEIR', 'MANGO', 'WASTE', 'COMMA', 'COLON', 'QUEST', 'POLKA']
+const wordArr = ['APPLE', 'QUALM', 'MERGE', 'WATER', 'SMELT', 'PASTE', 'BOXES', 'VODKA', 'PORCH', 'THEIR', 'MANGO', 'WASTE', 'COMMA', 'COLON', 'QUEST', 'POLKA', 'PATIO', 'COCOA', 'GIANT', 'SHAPE', 'QUITE', 'BERRY', 'MOCHA', 'LATTE', 'GLASS', 'GRASS', 'SPOON', 'PLANT', 'BEETS']
 
 
-const theWord = wordArr[Math.round(16 * Math.random())];
+const theWord = wordArr[Math.floor(28 * Math.random())];
 
 /* fetch(`https://wordsapiv1.p.mashape.com/words/?letters=6?random=true`)
         .then(res => res.json()) // parse response as JSON
