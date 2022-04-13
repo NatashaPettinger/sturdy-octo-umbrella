@@ -33,9 +33,9 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-     height: 50px;
-     font-size: 30px;
-     line-height: 50px;
+     height: 3rem;
+     font-size: 2rem;
+     line-height: 3rem;
      border-bottom: 1px solid rgb(58, 58, 60);
 }
 
@@ -55,43 +55,43 @@ header {
 .guessTable{
      width: 100%;
      border-collapse: separate;
-     border-spacing: 4px;
+     border-spacing: .25rem;
      display: flex;
      flex-flow: row wrap;
      justify-content: center;
 }
 .guess{
      border: 1px solid rgb(58, 58, 60);
-     width: 48px;
-     height: 48px;
-     line-height: 48px;
-     font-size: 32px;
+     width: 3.5rem;
+     height: 3.5rem;
+     line-height: 3rem;
+     font-size: 3rem;
 }
 
 button{
-     width: 16px;
-     height: 16px;
+     width: 1rem;
+     height: 1rem;
      background-color: rgb(130, 130, 130);
      border: none;
      border-radius: 5px;
      margin: 3px;
      font-weight: 900;
      color: white;
-     font-size: 12px;
+     font-size: .75rem;
 }
 
 form, input {
-     width: 16px;
+     width: 1rem;
      border-radius: 0;
      border: 0 solid rgb(58, 58, 60);
 }
 
 .keyboard, .wideKeyBoard{
-     width: 33px;
-     height: 58px;
+     width: 2rem;
+     height: 3.5rem;
 }
 .wider{
-     width: 50.4px;
+     width: 3.1rem;
 }
 
 /******************************************
